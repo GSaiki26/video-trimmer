@@ -18,7 +18,7 @@ USER node
 # Install the dependencies
 COPY --chown=node ./package.json .
 COPY --chown=node ./bun.lockb .
-RUN bun install
+RUN bun install --production
 
 # Copy the project
 COPY --chown=node ./tsconfig.json .
