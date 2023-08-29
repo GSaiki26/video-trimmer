@@ -1,0 +1,30 @@
+name: Code Security
+
+on:
+  pull_request:
+    branches: [ develop ]
+  push:
+    branches: [ master ]
+
+jobs:
+  snyk-check-package-security:
+    strategy:
+      fail-fast: true
+      matrix:
+        os: [ ubuntu-22.04 ]
+        version: [ latest ]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: ${{ matrix.version }}
+
+      - name: Install the dependencies
+        run: bun install
+
+      - name: Run Snyk
+        uses: snyk/actions/node@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
