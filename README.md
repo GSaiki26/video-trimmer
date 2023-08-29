@@ -1,5 +1,6 @@
 # Video trimmer
 [![Code Quality](https://github.com/GSaiki26/video-trimmer/actions/workflows/quality.yaml/badge.svg?branch=master&event=push)](https://github.com/GSaiki26/video-trimmer/actions/workflows/quality.yaml) [![Code Security](https://github.com/GSaiki26/video-trimmer/actions/workflows/security.yaml/badge.svg?branch=master&event=push)](https://github.com/GSaiki26/video-trimmer/actions/workflows/security.yaml) [![Project Build](https://github.com/GSaiki26/video-trimmer/actions/workflows/build.yaml/badge.svg?branch=master&event=push)](https://github.com/GSaiki26/video-trimmer/actions/workflows/build.yaml)
+
 The video trimmer is a Oven Bun application using TS and ffmpeg to trim differents parts from a video equally.
 
 # Usage
