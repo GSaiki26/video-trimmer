@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  video-splitter:
+    container_name: video-splitter
+    build: .
+    env_file: [ "./video-trimmer.env" ]
+    volumes:
+      - ./data:/app/data:rw

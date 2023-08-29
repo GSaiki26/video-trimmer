@@ -1,0 +1,20 @@
+{
+  "name": "video-trimmer",
+  "module": "./src/index.ts",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev:linter": "bun run prettier --write ./src",
+    "linter": "bun run prettier --check ./src",
+    "start:prod": "bun run ./src/index.ts"
+  },
+  "dependencies": {
+    "ffmpeg": "^0.0.4",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@types/ffmpeg": "^1.0.4",
+    "bun-types": "latest",
+    "prettier": "^3.0.3"
+  }
+}
